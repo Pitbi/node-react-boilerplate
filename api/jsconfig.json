@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@test-support/*": ["./test-support/*"],
+      "@features/*": ["./src/features/*"]
+    }
+  }
+}

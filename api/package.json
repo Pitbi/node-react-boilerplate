@@ -1,0 +1,77 @@
+{
+  "name": "nodejs-api-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "make-controller": "node ./bin/make-controller.js",
+    "make-model": "node ./bin/make-model.js",
+    "start": "NODE_ENV=development ./node_modules/.bin/nodemon ./bin/run.js"
+  },
+  "keywords": [
+    "nodejs",
+    "boilerplate",
+    "api",
+    "express"
+  ],
+  "author": "Pierre Biezemans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pitbi/nodejs-api-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Pitbi/nodejs-api-boilerplate#readme",
+  "dependencies": {
+    "api-request-validator": "^1.0.18",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "change-case": "^3.0.2",
+    "colour": "^0.7.1",
+    "@common": "file:../common/",
+    "connect-multiparty": "^2.1.1",
+    "express": "^4.16.3",
+    "fs-posix": "^3.0.0",
+    "i18n": "^0.8.3",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "module-alias": "^2.1.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.13",
+    "mongoose-deep-populate": "^3.1.1",
+    "morgan": "^1.9.0",
+    "path-to-regexp": "^2.4.0",
+    "prompt-async": "^0.9.9"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "jest": "^23.5.0",
+    "mockingoose": "^2.10.1",
+    "nodemon": "^1.18.4",
+    "sinon": "^6.2.0",
+    "sinon-express-mock": "^2.0.5"
+  },
+  "_moduleAliases": {
+    "@test-support": "test-support",
+    "@features": "src/features"
+  },
+  "jest": {
+    "globals": {
+      "__DEV": true,
+      "__DEBUG": false,
+      "__MONGO_URI": "mongodb://localhost:27017/nodejs-api-boilerplate-dev-jest"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules/",
+      "config/",
+      "test-support/"
+    ],
+    "verbose": false,
+    "setupFiles": [
+      "./test-support/jest-setup.js"
+    ],
+    "moduleNameMapper": {
+      "@test-support/(.*)": "<rootDir>/test-support/$1",
+      "@features/(.*)": "<rootDir>/src/features/$1"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "node-react-boilerplate-common",
+  "version": "1.0.0",
+  "description": "Common repo for @pitbi/node-react-boilerplate. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "boilerplate",
+    "node",
+    "react",
+    "api",
+    "app",
+    "express",
+    "mongo",
+    "redux"
+  ],
+  "author": "Pierre Biezemans",
+  "license": "ISC"
+}

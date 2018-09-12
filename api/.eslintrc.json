@@ -1,0 +1,51 @@
+{
+  "rules": {
+    "array-bracket-spacing": [2, "never"],
+    "arrow-body-style": [2, "as-needed"],
+    "arrow-spacing": [2, { "before": true, "after": true }],
+    "block-spacing": [2, "always"],
+    "callback-return": [2],
+    "constructor-super": [1],
+    "eqeqeq": [1, "always", { "null": "ignore" }],
+    "handle-callback-err": [1],
+    "jsx-quotes": [2, "prefer-single"],
+    "key-spacing": [2, { "beforeColon": false,"afterColon": true }],
+    "no-else-return": [1],
+    "no-mixed-requires": [2],
+    "no-multi-spaces": [2],
+    "no-new-require": [2],
+    "no-trailing-spaces": [1],
+    "no-sync": [1],
+    "no-unused-vars": [2, { "varsIgnorePattern": "^_|colour", "args": "none" }],
+    "no-var": [2],
+    "object-curly-spacing": [2, "always"],
+    "prefer-const": [1],
+    "prefer-template": [1],
+    "quotes": [2, "single"],
+    "quote-props": [2,  "as-needed"],
+    "semi": [2, "never"],
+    "indent": [2, 2],
+    "comma-spacing": [2, {
+      "before": false,
+      "after": true
+    }],
+    "sort-vars": [2, { "ignoreCase": true }],
+    "space-before-function-paren": [2, {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "space-infix-ops": [2],
+    "space-in-parens": [2, "never"]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "node": true
+  }
+}

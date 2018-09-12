@@ -1,0 +1,9 @@
+node_modules/*
+coverage/*
+.DS_Store
+.vscode/*
+.idea
+npm-debug.log
+.env
+tmp/cache/*
+!tmp/cache/cache.json
