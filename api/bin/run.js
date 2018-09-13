@@ -10,10 +10,10 @@ global.__DEV = __ENV === 'development'
 global.__SERVER_PORT = process.env.PORT || 2000
 global.__DEBUG = process.env.DEBUG ? true : false
 global.__PWD = process.env.PWD
-global.__CONFIG = require(`../config/${__ENV}.config`)
+global.__CONFIG = require(`@common/config/${__ENV}.config`)
 global.__TMP_DIR = path.join(process.env.PWD, 'tmp')
 global.__CACHE_DIR = path.join(process.env.PWD, 'tmp', 'cache')
-global.__MONGO_URI = process.env.MONGO_URI || __CONFIG.database.host
+global.__MONGO_URI = process.env.MONGO_URI || __CONFIG.database.uri
 
 
 const run = async () => {

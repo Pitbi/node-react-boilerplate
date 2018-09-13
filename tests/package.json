@@ -1,0 +1,32 @@
+{
+  "name": "node-react-boilerplate-tests",
+  "version": "1.0.0",
+  "description": "Cucumber.js tests for @pitbi/node-react-boilerplate.",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "keywords": [
+    "Test",
+    "React",
+    "Node",
+    "JS",
+    "boilerplate"
+  ],
+  "author": "Pierre Biezemans",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-match": "^1.1.1",
+    "chai-subset": "^1.6.0",
+    "chai-things": "^0.2.0",
+    "chromedriver": "^2.41.0",
+    "colour": "^0.7.1",
+    "@common": "file:../common/",
+    "cucumber": "^5.0.0",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.4",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "superagent": "^3.8.3"
+  }
+}
