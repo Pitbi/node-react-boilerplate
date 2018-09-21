@@ -4,7 +4,7 @@ require('colour')
 
 /*
   Arguments:
-  --clear-dep: remove node_mpdules folder before the install
+  --clean: remove node_mpdules folder before the install
 */
 
 const setup = async () => {
@@ -40,7 +40,7 @@ const link = async(app, path, repo) => {
 }
 
 const installDependencies = async (path, app) => {
-  if (process.argv.includes('--clear-dep'))
+  if (process.argv.includes('--clean'))
     await removeDependencies(path, app)
   console.info(`Installing ${app} dependecies`.cyan)
   const { stderr, stdout } = await exec(`cd ${path} && yarn install`)
