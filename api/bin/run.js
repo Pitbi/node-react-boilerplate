@@ -15,7 +15,6 @@ global.__TMP_DIR = path.join(process.env.PWD, 'tmp')
 global.__CACHE_DIR = path.join(process.env.PWD, 'tmp', 'cache')
 global.__MONGO_URI = process.env.MONGO_URI || __CONFIG.database.uri
 
-
 const run = async () => {
   /*Connect DB*/
   await db()

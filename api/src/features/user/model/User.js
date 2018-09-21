@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
 const userSchema = require('./schemas/user')
 const bcrypt = require('bcryptjs')
@@ -51,6 +52,16 @@ class UserClass {
 
   async comparePassword(candidatePassword) {
     return bcrypt.compare(candidatePassword, this.password)
+  }
+
+  makeJWT() {
+    const token = jwt.sign({
+      _id: this._id,
+      email: this.email,
+      date: new Date().getTime()
+    }, __CONFIG.jwt.secret)
+
+    return token
   }
 
   generateValidationToken() {

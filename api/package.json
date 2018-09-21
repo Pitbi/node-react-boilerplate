@@ -27,7 +27,7 @@
     "body-parser": "^1.18.3",
     "change-case": "^3.0.2",
     "colour": "^0.7.1",
-    "@common": "file:../common/",
+    "node-react-boilerplate-common": "file:../common/",
     "connect-multiparty": "^2.1.1",
     "express": "^4.16.3",
     "fs-posix": "^3.0.0",
@@ -52,7 +52,8 @@
   },
   "_moduleAliases": {
     "@test-support": "test-support",
-    "@features": "src/features"
+    "@features": "src/features",
+    "@common": "./node_modules/node-react-boilerplate-common"
   },
   "jest": {
     "globals": {
@@ -71,7 +72,17 @@
     ],
     "moduleNameMapper": {
       "@test-support/(.*)": "<rootDir>/test-support/$1",
-      "@features/(.*)": "<rootDir>/src/features/$1"
+      "@features/(.*)": "<rootDir>/src/features/$1",
+      "@common/(.*)": "node-react-boilerplate-common/$1"
     }
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./src",
+      "./bin",
+      "./node_modules/node-react-boilerplate-common",
+      "./package.json"
+    ],
+    "ignoreRoot": [".git", "coverage"]
   }
 }

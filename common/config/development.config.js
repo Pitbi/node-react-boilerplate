@@ -4,7 +4,7 @@ const CONFIG = {
   ...DEFAULT_CONFIG,
   database: {
     name: 'nodejs-api-boilerplate-dev',
-    host: 'mongodb://localhost:27017/nodejs-api-boilerplate-dev'
+    uri: 'mongodb://localhost:27017/nodejs-api-boilerplate-dev'
   }
 }
 

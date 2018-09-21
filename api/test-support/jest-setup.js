@@ -1,0 +1,1 @@
+global.__CONFIG = require('@common/config/test.config')

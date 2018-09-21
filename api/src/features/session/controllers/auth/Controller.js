@@ -1,9 +1,9 @@
-const Controller = require('../../../../core/Controller')
+const SessionController = require('../Controller')
 const Validator = require('./Validator')
 const User = require('../../../user/model')
 const ERRORS = require('./ERRORS')
 
-class AuthController extends Controller {
+class AuthController extends SessionController {
   constructor() {
     super(...arguments)
     this.Validator = Validator
@@ -21,6 +21,7 @@ class AuthController extends Controller {
       return this.throwError(ERRORS.USER_NOT_VALIDATED)
     await this.logIn(user)
 
+    this.response.authToken = user.makeJWT()
     this.response.user = user.format()
 
     this.respond()

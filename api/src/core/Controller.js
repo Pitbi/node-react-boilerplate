@@ -36,8 +36,6 @@ class Controller {
     } catch (err) {
       if (err.ok)
         return this.respond(err)
-      if (__DEBUG)
-        console.error(err)
       this.throwError(err)
     }
   }
@@ -70,7 +68,7 @@ class Controller {
     if (validator.warnings[0])
       this.response.APIWarnings = validator.warnings
     if (!validator.isValid) {
-      if (Object.keys(validator.errors)[0])
+      if (validator.errors && Object.keys(validator.errors)[0])
         throw { ...validator.error, errors: validator.errors }
       throw validator.error
     }
@@ -141,6 +139,15 @@ class Controller {
         this.response.message = this.__('error_payload_validation')
       }
     }
+
+    if (err && err instanceof Error && __DEV) {
+      console.error(err)
+      this.response.debug = {
+        message: err.message,
+        stack: err.stack
+      }
+    }
+
     this.send()
   }
 
