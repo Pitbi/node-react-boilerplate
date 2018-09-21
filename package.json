@@ -10,7 +10,8 @@
     "start-api": "cd ./api/ && yarn start",
     "start-front": "cd ./app/ && yarn start",
     "start": "concurrently \"yarn start-api\" \"yarn start-front\"",
-    "test": "yarn test"
+    "test": "yarn test",
+    "setup": "node setup"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/Pitbi/node-react-boilerplate#readme",
   "dependencies": {
+    "colour": "^0.7.1",
     "concurrently": "^4.0.1"
   }
 }
